@@ -1,0 +1,148 @@
+:root {
+    --login-color: #666;
+    --login-secondary: white;
+    --shadow: 4px 4px 10px rgba(0, 0, 0, 0.5)
+}
+
+html.dark {
+    --login-color: #444;
+    --login-secondary: black;
+}
+
+.login {
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+form {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    /* min-height: 400px; */
+    width: 330px;
+    border-radius: 30px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    width: 100%;
+}
+
+.header-buttons button {
+    color: var(--login-color);
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: transparent;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--login-color);
+    cursor: pointer;
+}
+
+.header-buttons button.active {
+    border-bottom: 3px solid var(--login-secondary);
+    color: var(--login-secondary);
+} 
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+    transition: all 0.3s linear;
+}
+
+.inputs label {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: var(--login-color);
+    font-weight: 600;
+    padding-left: 8px;
+}
+
+.inputs input {
+    font-size: 1rem;
+    width: 100%;
+    color: white;
+    background-color: var(--login-color);
+    padding: 0.6rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+button#submit {
+    background-color: blueviolet;
+    color: white;
+    padding: 0.7rem 0;
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 1rem;
+     border: none;
+     outline: none;
+     cursor: pointer;
+}
+
+#with-google, #forget {
+    background: transparent;
+    color: var(--primary-color);
+    margin-top: 0.4rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    outline: none;
+}
+
+#forget {
+    font-size: 0.6rem;
+}
+
+#google {
+    color: blueviolet;
+}
+
+.logout-btn {
+    background-color: blueviolet;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 0.7rem;
+}
+
+.logout-btn:hover {
+    background-color: rgb(120, 4, 228);
+}
+
+.logout-btn:hover {
+    transform: scale(0.98);
+}
+
+.loggedin-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.loggedin-username {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 0.4rem;
+}
+
+.loggedin-plan {
+    font-weight: 600;
+    color: var(--link-color);
+}
+

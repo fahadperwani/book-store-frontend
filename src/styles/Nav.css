@@ -1,0 +1,126 @@
+nav{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    min-width: 330px;
+    padding: 3rem 4rem;
+}
+
+.user{
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.user img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user .user-name{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--tertiary-color);
+}
+
+.user .user-plan{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.nav{
+    list-style: none;
+    margin-top: 3.5rem;
+}
+
+.nav li{
+    padding: 1rem 0.4rem 1rem 0;
+    border-bottom: 1px solid #999;
+    display: flex;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+.nav li:hover{
+    color: var(--tertiary-color);
+}
+
+.nav .link{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.3s ease-in;
+}
+
+.nav .icon{
+    height: 1rem !important;
+}
+
+.toggle-mode {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    width: 120px;
+    border-radius: 5px;
+    display: block;
+    margin: 2.5rem auto;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    display: none;
+    color: var(--secondary-color);
+}
+
+.cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    display: none;
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1000px){
+    nav {
+        position: fixed;
+        z-index: 999;
+        background: transparent;
+        left: -50%;
+        transition: all 0.3s linear;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    nav.shownav {
+        left: 0;
+        background-color: var(--primary-color);
+    }
+
+    nav.shownav .cross {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    nav {
+        left: -100%;
+    }
+}

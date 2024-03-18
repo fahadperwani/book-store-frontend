@@ -1,0 +1,12 @@
+.home{
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    overflow: hidden;
+}
+
+main{
+    padding: 0 4rem;
+    width: 100%;
+    overflow: hidden;
+}

@@ -1,0 +1,134 @@
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.category-container {
+    margin-bottom: 2rem;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    width: 100%;
+    overflow: scroll;
+    gap: 1rem;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.products::-webkit-scrollbar{
+    display: none;
+}
+
+.horizontal-scroll .products{
+    flex-wrap: nowrap;
+    width: 110%;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.product:hover img{
+    transform: scale(1.1);
+}
+
+h4{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.img-container{
+    height: 180px;
+    width: 140px;
+    background-color: var(--product-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.rating{
+    position: absolute;
+    z-index: 1;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    border-radius: 7px;
+    padding: 0.1rem;
+    bottom: 35px;
+    font-size: 0.9rem;
+    right: 5px;
+}
+
+img{
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+    /* border-radius: 20px; */
+    transition: transform .3s ease;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons {
+    margin-right: 1rem;
+    display: none;
+    gap: 0.5rem;
+}
+
+.horizontal-scroll .icons {
+    display: flex;
+}
+
+.icons button {
+    background: lightblue;
+    color: darkblue;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.products .icons{
+    display: none;
+}
+
+.toggle-expand {
+    background: transparent;
+    position: relative;
+    bottom: 40px;
+    border: none;
+    color: var(--tertiary-color);
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+
+
+@media screen and(max-width: 800px){
+    .icons {
+        margin-right: 0;
+    }
+}

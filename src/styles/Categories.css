@@ -1,0 +1,10 @@
+.categories {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.categories h1{
+    font-size: 2.5rem;
+    padding: 3rem 0;
+    /* text-align: center; */
+}

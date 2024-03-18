@@ -1,0 +1,176 @@
+.book{
+    width: 100%;
+    padding: 3rem 5rem;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+.skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.info {
+    width: 100%;
+}
+
+.book-header{
+    display: flex;
+    gap: 2rem;
+}
+
+.book img{
+    width: 200px;
+    height: 260px;
+}
+
+.book-header .rating{
+    position: inherit;
+    margin: 1rem 0;
+}
+
+.count{
+    margin-left: 1.5rem;
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.purchase{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--border-color);
+}
+
+.cart-icon {
+    background-color: blueviolet;
+    padding: 6px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-icon:active {
+    transform: scale(0.98);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+.author{
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.desc{
+    margin-top: 2rem;
+}
+
+.desc p{
+    color: var(--link-color);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    text-indent: 5rem;
+}
+
+.desc p::first-line{
+    padding-left: 1rem;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.inline-style {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;   
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.book .btn{
+    color: white;
+    background-color: blueviolet;
+    padding: 0.7rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book .btn:hover{
+    background-color: rgb(120, 4, 228);
+}
+
+.after-plan {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.buttons .btn:active{
+    transform: scale(0.98);
+}
+
+.buttons .listen-btn{
+    width: 150px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 1000px) , (max-width: 800px) {
+    .book {
+        padding: 3rem;
+    }
+
+    .book-header{
+        flex-direction: column;
+    }
+
+    .book-header .rating{
+        margin: 0.2rem 0;
+    }
+
+    .book img{
+        width: 230px;
+        height: 350px;
+    }
+
+    .purchase {
+        margin-top: 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 550px){
+    .inline-style {
+        flex-direction: column;
+        padding-right: 0;
+        align-items: flex-start;
+    }
+}
