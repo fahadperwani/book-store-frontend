@@ -2,7 +2,6 @@
   "name": "book-store",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://book-store-backend-pzsr.onrender.com",
   "dependencies": {
     "@stripe/stripe-js": "^1.35.0",
     "@testing-library/jest-dom": "^5.16.5",
