@@ -5,8 +5,8 @@ import useFetch from "../useFetch";
 import "../styles/Home.css";
 
 function Home() {
-  const bestSeller = useFetch("/genre/bestSellers");
-  const newRelease = useFetch("/genre/newRelease");
+  const bestSeller = useFetch("/genre/bestsellers");
+  const newRelease = useFetch("/genre/newrelease");
   return (
     <section className="home">
       <Search />
